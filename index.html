@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .process {
+      padding: 5rem;
+      margin: auto;
+      font-size: 2.5rem;
+      font-weight: 700;
+      border-top: 5px solid var(--blue);
+      background: white;
+      box-shadow: #959da533 0px 8px 24px;
+    }
+
+    .process .title {
+      width: 100%;
+      color: red;
+      margin-top: 0;
+    }
+
+    .r .process p {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+    }
+
+    .call {
+      margin-top: 2rem;
+    }
+
+    .call h2 {
+      font-size: 3.5rem;
+    }
+
+    .desp {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.1em;
+      text-align: center;
+      width: 100vw;
+    }
+
+    .anchor {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.1em;
+      text-decoration: none;
+    }
+
+    .process {
+      display: none;
+    }
+
+    .question.active,
+    .process.active {
+      display: block;
+    }
+
+    .active {
+      animation: fade 1s linear;
+    }
+
+    .process.active {
+      animation: fade 0.3s linear;
+    }
+
+    .elementor-widget-image {
+      text-align: center;
+    }
+
+    .elementor-widget-image a {
+      display: inline-block;
+    }
+
+    .elementor-widget-image a img[src$=".svg"] {
+      width: 48px;
+    }
+
+    .elementor-widget-image img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-42740ce0 img {
+      width: 300px;
+    }
+
+    .elementor-widget-image img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+
+    .elementor img {
+      height: auto;
+      max-width: 100%;
+      border: none;
+      border-radius: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .elementor *,
+    .elementor :after,
+    .elementor :before {
+      -webkit-box-sizing: border-box;
+      /* box-sizing: border-box; */
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    @font-face {
+      font-family: 'Poppins', sans-serif;
+      src: url(/fonts/Poppins-Bold.ttf)
+    }
+
+
+    .elementor-widget-image {
+      text-align: center;
+    }
+
+    .greenHeading {
+      color: #03c04a;
+
+    }
+
+    .elementor-element {
+      --widgets-spacing: 20px;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-50cabb79 {
+      padding: 37px 0px 0px 0px;
+    }
+
+    .elementor-element {
+      --widgets-spacing: 20px;
+    }
+
+    .elementor-section {
+      position: relative;
+    }
+
+    .elementor-section.elementor-section-boxed>.elementor-container {
+      max-width: 1140px;
+    }
+
+    .elementor-section.elementor-section-boxed>.elementor-container {
+      max-width: 1140px;
+    }
+
+    .question {
+      text-align: center;
+    }
+
+    .cta_btn {
+      max-width: 320px;
+      margin: auto;
+      background-color: #164163 !important;
+      border-radius: 1000px;
+    }
+
+    .elementor a {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-decoration: none;
+    }
+
+    .cta_btn {
+      text-align: center;
+      background-color: #2c88d9;
+      border-radius: 3px;
+      padding: 15px 0px;
+      margin-top: 10px;
+      max-width: 320px;
+      margin: auto;
+      background-color: #164163 !important;
+      border-radius: 1000px;
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-decoration: none !important;
+      display: block;
+    }
+
+    .complete {
+      font-size: 24px;
+      color: #1c244b;
+      width: 70%;
+      font-family: Poppins, Sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 38px;
+      letter-spacing: 0px;
+    }
+
+    .data {
+      text-align: center;
+      font-family: "poppins";
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 3%;
+      color: #324A6D;
+    }
+
+    .description {
+      text-align: center;
+      line-height: 24px;
+      color: #324a6d;
+      font-size: 14px;
+      font-family: "Poppins", sans-serif;
+      margin: 0px 0px 16.8px;
+      letter-spacing: 1px
+    }
+
+    .pHeading {
+      font-size: 30px;
+
+      color: #0f3357;
+      font-family: "Poppins", Sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 0.1em;
+      margin-top: -50px;
+      letter-spacing: 0px;
+      margin-bottom: 20px;
+    }
+
+    .blue_bar {
+      background-color: #04ade5;
+      width: 100%;
+      height: 200px;
+      margin-top: 56px;
+    }
+
+    .elementor *,
+    .elementor :after,
+    .elementor :before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    p {
+      color: white;
+    }
+
+    p,
+    .embed-vimeo {
+      margin-bottom: 1.2em;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-1501eb89 {
+      text-align: center;
+    }
+
+    .elementor-widget:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .elementor-widget:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    .elementor-element .elementor-widget-container {
+      -webkit-transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        -webkit-box-shadow 0.3s;
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        -webkit-box-shadow 0.3s;
+      -o-transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s, -webkit-box-shadow 0.3s;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-68e77816 .elementor-button {
+      font-size: 14px;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-68e77816 .elementor-button {
+      font-family: "Poppins", Sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: capitalize;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1em;
+      letter-spacing: 0px;
+      text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+      background-color: #04ade5;
+    }
+
+    .elementor-widget-button .elementor-button {
+      font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+      font-weight: var(--e-global-typography-accent-font-weight);
+      background-color: var(--e-global-color-accent);
+    }
+
+    .elementor-button.elementor-size-lg {
+      font-size: 18px;
+      padding: 20px 40px;
+      border-radius: 5px;
+    }
+
+    .elementor-align-center .elementor-button {
+      width: auto;
+    }
+
+    .elementor a {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      text-decoration: none;
+    }
+
+    .elementor-button {
+      display: inline-block;
+      line-height: 1;
+      background-color: #818a91;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: 3px;
+      color: #fff;
+      fill: #fff;
+      text-align: center;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    a.cta_btn.q1-btn {
+      font-family: "Public Sans";
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+    }
+
+    @media (max-width: 1024px) {
+      .elementor-67 .elementor-element.elementor-element-68e77816 .elementor-button {
+        font-size: 14px;
+      }
+
+      .elementor-67 .elementor-element.elementor-element-68e77816 .elementor-button {
+        /* font-family: "Poppins"; */
+        font-family: Sans-serif;
+
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: capitalize;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 1em;
+        letter-spacing: 0px;
+        text-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+        background-color: #04ade5;
+      }
+
+      .elementor-widget-button .elementor-button {
+        font-family: var(--e-global-typography-accent-font-family), Sans-serif;
+        font-weight: var(--e-global-typography-accent-font-weight);
+        background-color: var(--e-global-color-accent);
+      }
+
+      .elementor-button.elementor-size-lg {
+        font-size: 18px;
+        padding: 20px 40px;
+        border-radius: 5px;
+      }
+
+      .elementor-align-center .elementor-button {
+        width: auto;
+      }
+
+      .elementor a {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        text-decoration: none;
+      }
+
+      .elementor-button {
+        display: inline-block;
+        line-height: 1;
+        background-color: #818a91;
+        font-size: 15px;
+        padding: 12px 24px;
+        border-radius: 3px;
+        color: #fff;
+        fill: #fff;
+        text-align: center;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+    }
+
+    elementor-67 .elementor-element.elementor-element-22d4cab:not(.elementor-motion-effects-element-type-background),
+    .elementor-67 .elementor-element.elementor-element-22d4cab>.elementor-motion-effects-container>.elementor-motion-effects-layer {
+      background-color: #04ade5;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-22d4cab {
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+      padding: 25px 0px 50px 0px;
+    }
+
+    elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+      padding: 10px;
+    }
+
+    .elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .elementor-widget-wrap {
+      position: relative;
+      width: 100%;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -ms-flex-line-pack: start;
+      align-content: flex-start;
+    }
+
+    elementor-67 .elementor-element.elementor-element-1db2ab0e .elementor-heading-title {
+      font-size: 45px;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-1db2ab0e .elementor-heading-title {
+      color: #ffffff;
+      font-family: "Poppins", Sans-serif;
+      font-size: 42px;
+      font-weight: 600;
+      text-transform: none;
+      font-style: normal;
+      text-decoration: none;
+      line-height: 1.4em;
+      letter-spacing: 0px;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-1fdcc28 {
+      transition: background 0.3s, border 0.3s, border-radius 0.3s,
+        box-shadow 0.3s;
+      padding: 26px 0px 50px 0px;
+    }
+
+    .elementor-element {
+      --widgets-spacing: 20px;
+    }
+
+    .elementor-section {
+      position: relative;
+    }
+
+    .elementor-67 .elementor-element.elementor-element-1fdcc28>.elementor-container {
+      max-width: 800px;
+    }
+
+    @media (max-width: 1024px) {
+      .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1024px;
+      }
+
+      .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1140px;
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      .elementor-column.elementor-col-100,
+      .elementor-column[data-col="100"] {
+        width: 100%;
+      }
+
+      .elementor-element {
+        --widgets-spacing: 20px;
+      }
+
+      .elementor-column,
+      .elementor-column-wrap {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .elementor-column {
+        min-height: 1px;
+      }
+    }
+
+    p,
+    .embed-vimeo {
+      margin-bottom: 1.2em;
+    }
+
+    h1.elementor-size-default {
+      color: #0f3357;
+      font-family: Roboto, Sans-serif;
+      font-size: 78px;
+      font-weight: 600;
+      padding-left: 60px;
+      /* line-height: 78px; */
+      display: flex;
+      margin-top: -20px;
+      justify-content: center;
+
+    }
+
+    h2.take {
+      font-family: "Poppins";
+
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.8em;
+      font-variant-ligatures: normal;
+      font-variant-caps: normal;
+      text-align: center;
+      white-space: normal;
+      margin-top: -30px;
+      color: black !important;
+
+    }
+
+    p.elementor-heading-title {
+      font-size: 45px;
+      font-family: "Poppins", Sans-serif;
+      font-weight: bold"
+
+    }
+
+    .cta_btn:hover {
+      background-color: #03c04A !important;
+      cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+      .elementor-67 .elementor-element.elementor-element-1d55dcf2 {
+        width: 55%;
+        margin-left: -40px;
+        margin-top: 20px;
+      }
+
+      .elementor-element {
+        --widgets-spacing: 20px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .elementor-column {
+        width: 100%;
+      }
+
+      .elementor-column,
+      .elementor-column-wrap {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      .elementor-column {
+        min-height: 1px;
+      }
+
+      .elementor-element {
+        --flex-direction: initial;
+        --flex-wrap: initial;
+        --justify-content: initial;
+        --align-items: initial;
+        --align-content: initial;
+        --gap: initial;
+        --flex-basis: initial;
+        --flex-grow: initial;
+        --flex-shrink: initial;
+        --order: initial;
+        --align-self: initial;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: var(--flex-direction);
+        flex-direction: var(--flex-direction);
+        -ms-flex-wrap: var(--flex-wrap);
+        flex-wrap: var(--flex-wrap);
+        -webkit-box-pack: var(--justify-content);
+        -ms-flex-pack: var(--justify-content);
+        justify-content: var(--justify-content);
+        -webkit-box-align: var(--align-items);
+        -ms-flex-align: var(--align-items);
+        align-items: var(--align-items);
+        -ms-flex-line-pack: var(--align-content);
+        align-content: var(--align-content);
+        gap: var(--gap);
+        -ms-flex-preferred-size: var(--flex-basis);
+        flex-basis: var(--flex-basis);
+        -webkit-box-flex: var(--flex-grow);
+        -ms-flex-positive: var(--flex-grow);
+        flex-grow: var(--flex-grow);
+        -ms-flex-negative: var(--flex-shrink);
+        flex-shrink: var(--flex-shrink);
+        -webkit-box-ordinal-group: var(--order);
+        -ms-flex-order: var(--order);
+        order: var(--order);
+        -ms-flex-item-align: var(--align-self);
+        align-self: var(--align-self);
+      }
+
+      .elementor *,
+      .elementor :after,
+      .elementor :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      font,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td {
+        border: 0;
+        font-family: inherit;
+        font-size: 100%;
+        font-style: inherit;
+        font-weight: inherit;
+        margin: 0;
+        outline: 0;
+        padding: 0;
+        vertical-align: baseline;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .elementor-67.elementor-element.elementor-element-42740ce0 img {
+        width: 150px !important;
+      }
+
+
+      h1.elementor-size-default {
+        font-size: 30px;
+        text-align: center;
+        position: relative;
+        top: -40px;
+        left: -32px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+      }
+
+      p.elementor-heading-title {
+        font-size: 33px;
+        font-family: "Poppins", Sans-serif;
+        font-weight: bold;
+        padding-bottom: 10px;
+      }
+
+      .greenHeading {
+        color: #03c04a;
+        font-size: 25.6px;
+
+      }
+
+      a.cta_btn.q1-btn {
+        font-family: "Public Sans";
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        margin-top: 20px;
+        width: 297px;
+      }
+
+      .complete {
+        font-size: 24px;
+        color: #1c244b;
+        width: 70%;
+        font-family: "Poppins", Sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 25px;
+        letter-spacing: 0px;
+        margin-top: 15px;
+      }
+
+      p.elementor-heading-title {
+        font-size: 25px;
+        font-family: "Poppins", Sans-serif;
+        font-weight: bold;
+        margin-top: 7px;
+
+      }
+
+      .data {
+        text-align: center;
+        font-family: "poppins";
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 3%;
+        color: #324A6D !important;
+        margin-top: 10px;
+      }
+
+      .description {
+        text-align: center;
+        line-height: 24px;
+        color: #324a6d;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        margin-top: 20px;
+        /* margin:0px 15px 16.8px; */
+        letter-spacing: 0.5px
+      }
+
+      .pHeading {
+        font-size: 30px;
+
+        color: #0f3357;
+        font-family: Poppins, Sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 0.1em;
+
+        letter-spacing: 0px;
+        margin-bottom: 20px;
+      }
+
+      .elementor-67 .elementor-element.elementor-element-68e77816 .elementor-button {
+        font-size: 18px;
+      }
+
+      .blue_bar {
+        background-color: #04ade5;
+        width: 100%;
+        height: 120px;
+        margin-top: 40px;
+      }
+
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+  <link href="https://fonts.cdnfonts.com/css/public-sans" rel="stylesheet" />
+</head>
+
+<body>
+  <div data-elementor-type="wp-page" data-elementor-id="67" class="elementor elementor-67">
+    <section style="display: flex; justify-content: center"
+      class="elementor-section elementor-top-section elementor-element elementor-element-39b4b080 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="39b4b080" data-element_type="section">
+      <div class="elementor-container elementor-column-gap-default">
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e235c1c"
+          data-id="e235c1c" data-element_type="column">
+          <div class="elementor-widget-wrap"></div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1d55dcf2"
+          data-id="1d55dcf2" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-element elementor-element-42740ce0 elementor-widget elementor-widget-image"
+              data-id="42740ce0" data-element_type="widget" data-widget_type="image.default">
+              <div class="elementor-widget-container">
+                <style>
+                  /*! elementor - v3.7.4 - 31-08-2022 */
+                  .elementor-widget-image {
+                    text-align: center;
+                  }
+
+                  .elementor-widget-image a {
+                    display: inline-block;
+                  }
+
+                  .elementor-widget-image a img[src$=".svg"] {
+                    width: 48px;
+                  }
+
+                  .elementor-widget-image img {
+                    vertical-align: middle;
+                    display: inline-block;
+                  }
+                </style>
+                <img decoding="async" width="1000" height="316"
+                  src="https://debtreliefgroup.info/wp-content/uploads/2022/09/debt-relief-group-01.png"
+                  class="attachment-large size-large" alt="" loading="lazy" srcset="
+                      https://debtreliefgroup.info/wp-content/uploads/2022/09/debt-relief-group-01.png         1000w,
+                      https://debtreliefgroup.info/wp-content/uploads/2022/09/debt-relief-group-01-300x95.png   300w,
+                      https://debtreliefgroup.info/wp-content/uploads/2022/09/debt-relief-group-01-768x243.png  768w
+                    " sizes="(max-width: 1000px) 100vw, 1000px" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-30769e0e"
+          data-id="30769e0e" data-element_type="column">
+          <div class="elementor-widget-wrap"></div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="elementor-section elementor-top-section elementor-element elementor-element-50cabb79 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="50cabb79" data-element_type="section" style="width: 100%; display: flex; justify-content: center">
+      <div class="elementor-container elementor-column-gap-default">
+        <div
+          class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7f2bc7ab"
+          data-id="7f2bc7ab" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-element elementor-element-8bd2317 elementor-widget elementor-widget-heading"
+              data-id="8bd2317" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+              
+                <h1 class="elementor-size-default">Over $7,000 In Debt?</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="elementor-section elementor-top-section elementor-element elementor-element-9ac4159 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="9ac4159" data-element_type="section" style="
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-top: -35px;
+        ">
+      <div class="elementor-container elementor-column-gap-default">
+        <div
+          class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-58b82a86"
+          data-id="58b82a86" data-element_type="column">
+          <div class="elementor-widget-wrap elementor-element-populated" style="
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+              ">
+            <div class="elementor-element elementor-element-34bf7eef elementor-widget elementor-widget-heading"
+              data-id="34bf7eef" data-element_type="widget" data-widget_type="heading.default">
+              <div class="elementor-widget-container" style="width: 100%; justify-content: center">
+                <h3 class="elementor-heading-title elementor-size-small"></h3>
+                <h2 class="take">
+                  Take this short quiz to see if you prequalify
+                </h2>
+              </div>
+            </div>
+            
+            <div class="question" id="q1">
+              <h2>
+                <b><u><span class="greenHeading" style="color: #03c04a">Your Estimated Debt Owed ?</span></u></b>
+              </h2>
+              <p class="btn"><a class="cta_btn q1-btn" onclick="q3()">$0 - $4,999</a></p>
+              <p class="btn">
+                <a class="cta_btn q1-btn" onclick="q3()">$5,000 - $14,999</a>
+              </p>
+              <p class="btn">
+                <a class="cta_btn q1-btn" onclick="q3()">$15,000 - $24,999</a>
+              </p>
+              <p class="btn"><a class="cta_btn q1-btn" onclick="q3()">$25,000 +</a></p>
+            </div>
+
+            <div class="process p1">Reviewing Your Answers...</div>
+            <div class="process p2">
+              Matching You with the Best Options...
+            </div>
+            <div class="process p3">Confirming Eligibility...</div>
+            <div class="process p4">
+              <h1 class="title">
+                Last Step - You are eligible and qualify for compensation.
+              </h1>
+              <h1 class="title" style="color:black;background-color: yellow;width: fit-content;">FREE CONSULTATION CALL
+              </h1>
+              <p>
+                There are absolutely NO COSTS or COMMITMENTS incurred for
+                calling and talking to our legal team.
+              </p>
+              <div class="call">
+                <h2>TAP TO CALL</h2>
+                <a href="tel:+1(346) 788-6952">
+                  <button class="btn">+1(346) 788-6952</button></a>
+                <div id=timer></div>
+              </div>
+
+              <div class="elementor-element elementor-element-1501eb89 elementor-widget elementor-widget-heading"
+                data-id="1501eb89" data-element_type="widget" data-widget_type="heading.default">
+                <div class="elementor-widget-container" style="width: 100%; display: flex; justify-content: center">
+                  <span class="elementor-heading-title elementor-size-default complete">Complete your application over
+                    the phone or simply get your
+                    questions answered.</span>
+                </div>
+              </div>
+              <div
+                class="elementor-element elementor-element-68e77816 elementor-align-center elementor-widget elementor-widget-button"
+                data-id="68e77816" data-element_type="widget" data-widget_type="button.default"
+                style="display: flex; justify-content: center">
+                <div class="elementor-widget-container">
+                  <div class="elementor-button-wrapper">
+                    <a href="tel:18334092767" class="elementor-button-link elementor-button elementor-size-lg"
+                      role="button" id="call-button">
+                      <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">(833) 409-2767</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </div>
+
+  <div class="blue_bar">
+    <section
+      class="elementor-section elementor-top-section elementor-element elementor-element-22d4cab elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+      data-id="22d4cab" data-element_type="section" data-settings='{"background_background":"classic"}'>
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-1db2ab0e elementor-widget elementor-widget-heading"
+          data-id="1db2ab0e" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container" style="display: flex; justify-content: center">
+            <p class="elementor-heading-title">You Are Not Alone.</p>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-2704b00d elementor-widget elementor-widget-heading"
+          data-id="2704b00d" data-element_type="widget" data-widget_type="heading.default"
+          style="display: flex; justify-content: center">
+          <div class="elementor-widget-container">
+            <p class="elementor-heading-title elementor-size-default pHeading">
+              We're Here To Help
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section
+    class="elementor-section elementor-top-section elementor-element elementor-element-1fdcc28 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="1fdcc28" data-element_type="section" data-settings='{"background_background":"classic"}'
+    style="display: flex; justify-content: center">
+    <div class="elementor-container elementor-column-gap-default">
+      <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-702cdfe"
+        data-id="702cdfe" data-element_type="column" style="display: flex; justify-content: center">
+        <div class="elementor-widget-wrap elementor-element-populated">
+          <div class="elementor-element elementor-element-394724a elementor-widget elementor-widget-text-editor"
+            data-id="394724a" data-element_type="widget" data-widget_type="text-editor.default"
+            style="display: flex; justify-content: center">
+            <div class="elementor-widget-container" style="width: 70%">
+              <style>
+                /*! elementor - v3.7.4 - 31-08-2022 */
+                .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                  background-color: #818a91;
+                  color: #fff;
+                }
+
+                .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                  color: #818a91;
+                  border: 3px solid;
+                  background-color: transparent;
+                }
+
+                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                  margin-top: 8px;
+                }
+
+                .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                  width: 1em;
+                  height: 1em;
+                }
+
+                .elementor-widget-text-editor .elementor-drop-cap {
+                  float: left;
+                  text-align: center;
+                  line-height: 1;
+                  font-size: 50px;
+                }
+
+                .elementor-widget-text-editor .elementor-drop-cap-letter {
+                  display: inline-block;
+                }
+              </style>
+              <h2 class="data">© 2022 DebtReliefGroup.info</h2>
+              <p class="description">
+                This site is a free educational and motivational resource to
+                help American residents understand consolidation options. The
+                educational resources, articles, and videos on this site, as
+                well as links provided to state and federal hardship
+                assistance are for informational purposes only and not to be
+                construed as legal advice.
+              </p>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-05269a9 elementor-widget elementor-widget-text-editor"
+            data-id="05269a9" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+              <p style="text-align: center">
+                <span style="color: #808080"><a style="color: #808080"
+                    href="https://debtreliefgroup.info/privacy-policy/">Privacy Policy</a>
+                  |
+                  <a style="color: #808080" href="https://debtreliefgroup.info/terms-of-use/">Terms of
+                    Use</a></span><br /><span style="color: #808080"><a style="color: #808080">Do Not Sell My
+                    Information</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
